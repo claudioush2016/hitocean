@@ -5,7 +5,7 @@ Para el Testing
 2- ejecutar composer i
 3- ejecutar composer dump-autoload (para cargar helpers)
 4- importar en postman el archivo hit.postman_collection.json
-5- importar el archivo sql a nuestra base de datos
+5- importar el archivo sql "hitocean.sql" a nuestra base de datos
 
 <h3>Postman</h3>
 
