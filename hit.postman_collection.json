@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "ffbf01f3-e8db-4a51-902b-7a20af683d10",
+		"name": "hit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15468764"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Account",
+					"item": [
+						{
+							"name": "Add New Player",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"admin@prueba.com\",\r\n    \"password\":\"123456\",\r\n    \"name\":\"player 2\",\r\n    \"pj_type\":2,\r\n    \"email_user\":\"player2@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/auth/new-user",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"new-user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Items",
+					"item": [
+						{
+							"name": "new item",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/auth/new-item?email=admin@prueba.com&password=123456&name=Armadura Epica&type_id=2&attack=8&deff=8",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"new-item"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "admin@prueba.com"
+										},
+										{
+											"key": "password",
+											"value": "123456"
+										},
+										{
+											"key": "name",
+											"value": "Armadura Epica"
+										},
+										{
+											"key": "type_id",
+											"value": "2"
+										},
+										{
+											"key": "attack",
+											"value": "8"
+										},
+										{
+											"key": "deff",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify Item",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/auth/edit-item/8?email=admin@prueba.com&password=123456&type_id=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"edit-item",
+										"8"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "admin@prueba.com"
+										},
+										{
+											"key": "password",
+											"value": "123456"
+										},
+										{
+											"key": "type_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Game",
+					"item": [
+						{
+							"name": "See All Ultis",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/auth/all-ultis?email=admin@prueba.com&password=123456",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"all-ultis"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "admin@prueba.com"
+										},
+										{
+											"key": "password",
+											"value": "123456"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Players",
+			"item": [
+				{
+					"name": "Attack Others",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/player/attack/2/6?action_type=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"player",
+								"attack",
+								"2",
+								"6"
+							],
+							"query": [
+								{
+									"key": "action_type",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Equipament Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/player/set-arm/3?email=claudiocabrera12@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"player",
+								"set-arm",
+								"3"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "claudiocabrera12@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
